@@ -30,6 +30,7 @@ public class AITank : MonoBehaviour {
                 float x = Mathf.Sin(angle) * radius;
                 float z = Mathf.Cos(angle) * radius;
                 Vector3 pos = new Vector3(x, 0.5f, z);
+                pos = transform.TransformPoint(pos);
                 Gizmos.color = Color.green;
                 Gizmos.DrawWireSphere(pos, 1);
             } 
@@ -49,6 +50,7 @@ public class AITank : MonoBehaviour {
             float x = Mathf.Sin(angle) * radius;
             float z = Mathf.Cos(angle) * radius;
             Vector3 pos = new Vector3(x, 0.5f, z);
+            pos = transform.TransformPoint(pos);
             waypoints.Add(pos);
         } 
     }
