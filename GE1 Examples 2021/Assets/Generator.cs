@@ -5,10 +5,28 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
     public int loops = 10;
+    float radius = 3;
     public GameObject prefab;
     // Start is called before the first frame update
     void Start()
     {
+        int num = 10;
+        int radiusStart = 3;
+        float theta = (2.0f * Mathf.PI) / (float) num;
+        for(int j = 0; j < loops; j++){
+            int radius = radiusStart + j;
+            for( int i = 0; i < num; i++){
+                float angle = theta * i;
+                float x = Mathf.Sin(angle) * radius * 1.1f;
+                float y = Mathf.Cos(angle) * radius * 1.1f;
+                GameObject go = GameObject.Instantiate<GameObject>(prefab);
+                go.transform.position = transform.TransformPoint(
+                    (new Vector3(x, y, 0))
+                );
+
+                go.transform.parent = this.transform;
+            } 
+        }
         
     }
 
