@@ -38,6 +38,18 @@ public class FPSController : MonoBehaviour
 
     void Pitch(float angle)
     {        
+        float dot = Vector3.Dot(transform.forward, Vector3.up);
+        if(dot > 0.9f && angle < -0.1f){
+            if(angle < 0){
+                angle = angle * -1;
+            }
+            
+        }
+        else if(dot < -0.9f && angle > 0.1f){
+            if(angle > 0){
+                angle = angle * -1;
+            }
+        }
         // A pitch is a rotation around the right vector
         Quaternion rot = Quaternion.AngleAxis(angle, transform.right);
 
