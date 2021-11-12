@@ -7,7 +7,7 @@ public class enemyTankSpawner : MonoBehaviour
     public GameObject enemyTank;
     float min = -40;
     float max = 40;
-    int enemyCounter = 0;
+    public int enemyCounter = 0;
 
     System.Collections.IEnumerator spawnEnemyTank(){
 
@@ -38,6 +38,6 @@ public class enemyTankSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        enemyCounter = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 }

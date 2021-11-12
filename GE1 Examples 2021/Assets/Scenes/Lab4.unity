@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTank: {fileID: 9069108903942820725, guid: 1a9e634c9a94bbb4cad1781779b8e48a,
     type: 3}
+  enemyCounter: 0
 --- !u!4 &732036362
 Transform:
   m_ObjectHideFlags: 0
@@ -280,6 +281,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotSpeed: 180
+--- !u!114 &793488678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793488676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0764203b5d5b4324c9c9e6f74f745917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 5
+  bulletPrefab: {fileID: 5225532400266386832, guid: 5243983eab731c14781c2e00a351bcd4,
+    type: 3}
+  bulletSpawn: {fileID: 1791302508}
 --- !u!4 &793488679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3734974144795468356, guid: d744fd040495ab64496cff52cdd2a447,
@@ -293,6 +310,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3734974144566252416, guid: d744fd040495ab64496cff52cdd2a447,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734974144566252417, guid: d744fd040495ab64496cff52cdd2a447,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3734974144795468356, guid: d744fd040495ab64496cff52cdd2a447,
         type: 3}
       propertyPath: m_RootOrder
@@ -352,6 +379,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player_Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734974144942097226, guid: d744fd040495ab64496cff52cdd2a447,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734974144942097227, guid: d744fd040495ab64496cff52cdd2a447,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734974145499764984, guid: d744fd040495ab64496cff52cdd2a447,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734974145499764987, guid: d744fd040495ab64496cff52cdd2a447,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734974145502613180, guid: d744fd040495ab64496cff52cdd2a447,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734974145502613183, guid: d744fd040495ab64496cff52cdd2a447,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d744fd040495ab64496cff52cdd2a447, type: 3}
@@ -544,6 +601,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2134235660}
+--- !u!1 &1791302507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791302508}
+  m_Layer: 0
+  m_Name: bullet_spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1791302508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791302507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.705, z: 1.281}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 793488679}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2134235659
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,5 +659,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 793488679}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
